@@ -1,0 +1,19 @@
+<?
+$dbhost="127.0.0.1";
+$dbuser="root";
+$pwd="";
+$dbname="stock";
+
+$ProductID   = $_POST['txtProductID'];
+$ProduckName = $_POST['txtProduckName'];
+$Amout       = $_POST['txtAmout'];
+$cost        = $_POST['txtcost'];
+
+$connect = mysql_connect($dbhost,$dbuser,$pwd) or die("Not Connect Server");
+mysql_select_db($dbname) or die("No Database Name");
+$sql = "insert into product(ProductID,ProduckName,Amout,cost) values('$ProductID','$ProduckName','$Amout','$cost')";
+
+$result =mysql_query($sql);
+header("location:ListAll.php");
+
+?>

@@ -1,0 +1,149 @@
+<script>
+var img;
+
+function check(){
+
+var logo2=document.getElementById("Gender2").checked;
+var logo3=document.getElementById("Gender3").checked;
+var logo4=document.getElementById("Gender4").checked;
+var logo5=document.getElementById("Gender5").checked;
+var logo6=document.getElementById("Gender6").checked;
+var logo7=document.getElementById("Gender7").checked;
+
+
+if(logo2==false && logo3==false && logo4==false && logo5==false && logo6==false && logo7==false){
+return false;
+}
+
+}
+
+</script>
+
+</html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<form action="test2" method="GET">
+<body>
+  
+   <table border="0" width=100% align="center"  >
+      <tr>
+	     <td align="center" >
+	            <img src='Logo.jpg' width="80" height="100"><br><br><br>
+				<font size="5" >สร้างโปรไฟล์ 50 ปี ม.อ.</font>  <br><br>
+				<font size="4" font color="#7a7a7a" >ร่วมฉลองครบรอบ 50 ปี มหาวิทยาลัยสงขลานครินทร์</font><br><br><br><br>
+				<hr>
+				
+				
+
+				<input type="radio" id="Gender2" name="rdoGender" value="logo2.png" onclick="check(this.value)"><img src='logo2.png' width="150" height="150">
+				<input type="radio" id="Gender3" name="rdoGender" value="logo3.png"><img src='logo3.png' width="150" height="150">
+				<input type="radio" id="Gender4" name="rdoGender" value="logo4.png"><img src='logo4.png' width="150" height="150">
+				<input type="radio" id="Gender5" name="rdoGender" value="logo5.png"><img src='logo5.png' width="150" height="150">
+				<input type="radio" id="Gender6" name="rdoGender" value="logo6.png"><img src='logo6.png' width="150" height="150">
+				<input type="radio" id="Gender7" name="rdoGender" value="logo7.png"><img src='logo7.png' width="150" height="150">
+				
+
+				<hr>
+
+				<?
+				//echo $Gender=$_GET['rdoGender']; // รับค่า gender จาก method get
+				?>
+
+				<img src='picc/<?php echo $_GET['rdoGender'];?>' width="300" height="300">
+
+				
+		 </td>
+      </tr>
+      <tr>
+	</html>
+				<td > <form name="frm">
+
+
+
+
+
+
+
+
+<head>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+</head>
+
+ 
+
+<script type="text/javascript">
+
+function readURL(input) {
+
+if (input.files && input.files[0]) {
+
+var reader = new FileReader();
+
+ 
+
+reader.onload = function (e) {
+
+$('#blah').attr('src', e.target.result);
+
+}
+
+ 
+
+reader.readAsDataURL(input.files[0]);
+
+}
+
+}
+
+</script>
+
+<body>
+<table border="0" width=30% align="center">
+<form id="form1" runat="server">
+
+<input type='file' name="rdo" onchange="readURL(this);"  />
+
+
+</form>
+</table>
+</body>
+
+</html>
+
+<br><br>
+<br>
+<br>
+<br>
+<br>
+
+
+<body>
+<table border="0" width=30% align="center">
+<tr>
+<td>
+<div style="position: absolute; z-index: 99;"><img id="blah" name="r" src="#"  width="380" height="380"  /></div>
+
+
+</td>
+</tr>
+</table>
+</body>
+<input type ="submit" value="ตกลง" onclick=return check();>echo " <meta http-equiv='refresh' content='0; url=register.php '>";
+
+
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form action="test2.php" method="GET">
+<?
+
+			print"<td><a href=test2.php?rdoGender=$row[rdoGender]>ประมวลผล Profile</a></div></td>";
+?>
